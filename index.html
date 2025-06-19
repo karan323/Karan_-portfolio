@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -453,13 +453,12 @@
     }
     .assicon-card {
       position: relative;
-      width: 80%; /* Adjusted to 80% width */
-      height: 240px;
+      width: 100%;
+      height: 280px; /* Increased height for better image display */
       overflow: hidden;
       border-radius: 14px;
       box-shadow: 0 4px 20px rgba(24, 90, 157, 0.1);
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      margin: 0 auto; /* Center the card */
     }
     .assicon-card:hover {
       transform: scale(1.1);
@@ -508,11 +507,80 @@
       box-shadow: 0 2px 8px rgba(67, 206, 162, 0.1);
       text-align: justify;
     }
+    /* New Robarts Research Section */
+    .robarts-section {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .robarts-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 24px 0;
+    }
+    .robarts-card {
+      position: relative;
+      width: 100%;
+      height: 300px; /* Increased height for better image display */
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(24, 90, 157, 0.1);
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .robarts-card:hover {
+      transform: scale(1.1);
+      z-index: 100;
+      box-shadow: 0 12px 40px rgba(24, 90, 157, 0.3);
+    }
+    .robarts-image-container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .robarts-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .robarts-card:hover .robarts-image-container img {
+      transform: scale(1.05);
+    }
+    .robarts-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 16px;
+      background: rgba(26, 41, 128, 0.9);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+      box-sizing: border-box;
+      white-space: normal;
+      word-wrap: break-word;
+      transition: background-color 0.3s ease;
+    }
+    .robarts-card:hover .robarts-caption {
+      background: rgba(26, 41, 128, 0.36);
+    }
+    .robarts-desc {
+      font-size: 1.1rem;
+      color: #333;
+      background: #f8fafd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(67, 206, 162, 0.1);
+      text-align: justify;
+    }
     @media (max-width: 900px) {
-      .fieldwork-gallery, .eans-gallery, .assicon-gallery {
+      .fieldwork-gallery, .eans-gallery, .assicon-gallery, .robarts-gallery {
         grid-template-columns: 1fr;
       }
-      .fw-card:hover, .cadaver-image:hover, .mis-image:hover, .eans-card:hover, .assicon-card:hover {
+      .fw-card:hover, .cadaver-image:hover, .mis-image:hover, .eans-card:hover, .assicon-card:hover, .robarts-card:hover {
         transform: scale(1.15);
       }
       .cadaver-section, .mis-section {
@@ -529,8 +597,8 @@
       .cadaver-desc, .mis-desc {
         padding: 14px 10px;
       }
-      .assicon-card {
-        width: 95%; /* Adjusted for mobile */
+      .assicon-card, .robarts-card {
+        height: 240px;
       }
     }
     @media (max-width: 600px) {
@@ -551,9 +619,12 @@
         padding: 6px 12px;
         font-size: 0.9rem;
       }
-      .fw-caption, .cadaver-caption, .mis-caption, .eans-caption, .assicon-caption {
+      .fw-caption, .cadaver-caption, .mis-caption, .eans-caption, .assicon-caption, .robarts-caption {
         font-size: 0.9rem;
         padding: 10px;
+      }
+      .assicon-card, .robarts-card {
+        height: 200px;
       }
     }
 </style>
@@ -784,6 +855,49 @@
   </div>
   <div class="assicon-desc">
     Represented the company at the ASSICON 2025 conference in India, a premier event for spine surgeons. Coordinated and conducted meetings with key surgeons, providing hands-on demonstrations of the Navient Cranial and Spine Navigation systems. Highlighted the system's clinical benefits in spine and neuro procedures, contributing to increased awareness and engagement with navigation-assisted surgical technologies in the region.
+  </div>
+</div>
+</section>
+<!-- NEW ROBARTS RESEARCH SECTION -->
+<section>
+<h2>🔬 Hands-on Experience at Robarts Research Center — London, Ontario 🇨🇦</h2>
+<div class="robarts-section">
+  <div class="robarts-gallery">
+    <div class="robarts-card">
+      <div class="robarts-image-container">
+        <img alt="Robarts Research Center Training" src="15.jpg"/>
+      </div>
+      <div class="robarts-caption">Robarts Research Center Training</div>
+    </div>
+    <div class="robarts-card">
+      <div class="robarts-image-container">
+        <img alt="Spinal Navigation Practice" src="16.jpg"/>
+      </div>
+      <div class="robarts-caption">Spinal Navigation Practice</div>
+    </div>
+  </div>
+  <div class="robarts-desc">
+    I had the opportunity to participate in a specialized training program focused on spinal navigation and instrumentation. During this hands-on session, I performed screw placements in the lumbar spine region using porcine models (pig spines), which are commonly utilized in surgical research and education due to their close anatomical resemblance to human spinal structures.
+    <br><br>
+    <strong>Key highlights of the training included:</strong>
+    <ul>
+      <li>Gaining practical experience in navigation-assisted spinal procedures</li>
+      <li>Understanding the critical importance of precision, accuracy, and safety in screw placement</li>
+      <li>Enhancing my knowledge of spinal anatomy and instrumentation techniques</li>
+      <li>Strengthening my ability to support surgeons during live surgical procedures</li>
+    </ul>
+    <br>
+    <strong>Anatomical Similarities of Porcine and Human Spines:</strong>
+    <ul>
+      <li>Comparable vertebral size, shape, and alignment</li>
+      <li>Similar bone density and mechanical properties</li>
+      <li>Analogous intervertebral disc structure and biomechanics</li>
+      <li>Realistic surgical access and operative approach</li>
+    </ul>
+    <br>
+    This experience has significantly advanced my technical competencies as a Clinical Application Engineer, further equipping me to provide expert intraoperative support, system training, and troubleshooting in complex surgical environments.
+    <br><br>
+    I remain committed to continuous learning and contributing to the advancement of surgical navigation technologies and patient care.
   </div>
 </div>
 </section>
